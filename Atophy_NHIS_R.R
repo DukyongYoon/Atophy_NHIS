@@ -31,13 +31,10 @@ length(req.col)==length(req.col.idx)
 col.select<-rep("NULL",length(Temp.data))
 col.select[req.col.idx]<-NA #선택할 열만 입력
 
-start.time<-Sys.time()
 Data.20<-Temp.data[0,req.col]
 for(i in 1:length(file.list.20)){
   Data.20 <- rbind(Data.20,read.csv(file.list.20[i], as.is=TRUE, colClasses=col.select))
 }
-endtime<-Sys.time()
-endtime-start.time
 gc() 
 
 nrow(Data.20)
