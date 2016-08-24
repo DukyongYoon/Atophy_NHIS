@@ -1,4 +1,7 @@
+#Set working directory
 setwd("/home/yoon/mnt/SSD1T/HIRA-NPS_2011/NPS_2011")
+
+#Get file list
 file.list<-dir()
 file.list.20<-file.list[grep("_20_",file.list)]
 file.list.30<-file.list[grep("_30_",file.list)]
